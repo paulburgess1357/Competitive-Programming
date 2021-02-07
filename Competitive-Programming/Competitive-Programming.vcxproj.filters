@@ -29,5 +29,11 @@
     <ClInclude Include="Chapter2\2_1_3_TypeDef.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Chapter2\2_2_1_Recursion_Subsets.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Utility.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
