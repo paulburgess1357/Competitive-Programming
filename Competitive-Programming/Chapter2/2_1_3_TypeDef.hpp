@@ -2,8 +2,6 @@
 #include <vector>
 #include <utility>
 
-// Shortening Code
-
 
 // ----------------------------- Typedef -----------------------------
 

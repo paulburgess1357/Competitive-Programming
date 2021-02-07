@@ -2,7 +2,9 @@
 #include <iostream>
 #include <string>
 
-// Basic IO
+
+// ---------------------------- Basic IO ----------------------------
+
 inline void input_output1(){
 	int a, b;
 	std::string x;
