@@ -146,6 +146,7 @@
     <ClInclude Include="Chapter2\2_1_2_Basic_Numbers.hpp" />
     <ClInclude Include="Chapter2\2_1_3_TypeDef.hpp" />
     <ClInclude Include="Chapter2\2_2_1_Recursion_Subsets.hpp" />
+    <ClInclude Include="Chapter2\2_2_2_Recursion_Permutations.hpp" />
     <ClInclude Include="Utility\Utility.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
