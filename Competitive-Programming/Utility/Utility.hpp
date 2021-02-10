@@ -15,3 +15,7 @@ inline void print_vector(std::vector<T> vec) {
 	std::cout << "}\n";
 }
 
+template <typename T>
+inline void print(T val){
+	std::cout << val << std::endl;	
+}

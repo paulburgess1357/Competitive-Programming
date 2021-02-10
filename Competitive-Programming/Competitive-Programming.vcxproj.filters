@@ -38,5 +38,8 @@
     <ClInclude Include="Chapter2\2_2_2_Recursion_Permutations.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Chapter2\2_3_0_Bit_Manipulation.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
