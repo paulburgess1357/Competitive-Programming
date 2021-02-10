@@ -10,3 +10,4 @@ Source: Guide to Competitive Programming by Antti Laaksonen
 #### 2.1.3 : [Typedef](https://github.com/paulburgess1357/Competitive-Programming/blob/master/Competitive-Programming/Chapter2/2_1_3_TypeDef.hpp)
 ### 2.2 : Basic Recursion
 #### 2.2.1 : [Generating Sets](https://github.com/paulburgess1357/Competitive-Programming/blob/master/Competitive-Programming/Chapter2/2_2_1_Recursion_Subsets.hpp)
+#### 2.2.2 : [Generating Permutations](https://github.com/paulburgess1357/Competitive-Programming/blob/master/Competitive-Programming/Chapter2/2_2_2_Recursion_Permutations.hpp)
