@@ -28,6 +28,7 @@
 // = 32 + 8 + 4 + 1
 // = 45
 
+
 // -------------- Left and Right Shift Operators --------------
 
 // Operations are performed at the byte level.  Every bitwise operator will
@@ -57,6 +58,7 @@ inline void bit_left_shift(int number, int shift_num){
 
 
 // --------------------- Bitwise AND ------------------------
+// Both positions need to be a 1 for the result position to be a 1.
 
 // Bitwise AND "&"
 // 01001000 &
@@ -68,7 +70,9 @@ inline void bitwise_and(int num1, int num2){
 	print(num1 & num2);
 }
 
+
 // ---------------------- Bitwise OR -------------------------
+// Only one bit needs to be a 1 for the result position to be a 1.
 
 // Bitwise OR "|"
 // 01001000
@@ -96,11 +100,105 @@ inline void bitwise_or(int num1, int num2){
 // is convert it to a number:
 // in_use & 1 << car_num;
 
+// Check if car is in use
+inline int is_in_use(int car_location){
 
-
-int is_in_use(int car_location){
-
+	//I.E. 00000000
 	char in_use = 0;	
-	return in_use & 1 << car_location;
+
+	// Start with the number 1 (because this is a single bit)
+	// Shift '1' over by 'car_location' slots (shifting left)
+	// Car '0' is the rightmost bit.
+	// Car '1' is the next bit to the left
+	// Car '2' is the next bit to the left (from car 1) etc.
+
+	// So we have:
+	//                           in_use = 00000000 &
+	// 1 bit =  00000001; Shift(ex. 3):   00001000
+	// Result =                           00000000
+
 	
+	char result = in_use & 1 << car_location;
+
+	// Left shift takes precedence over '&'
+	// Shift left then do &
+	return in_use & 1 << car_location;	
 }
+
+// The above allows us to check if a car is in use.  However, we still need to
+// be able to set a car in use.  We can use the or "|" operator to do this
+
+inline void set_in_use(int car_location){
+
+	// I.E. 00000000
+	char in_use = 0;
+
+	// Set the 4th car in use:
+	// 00000000
+	// 00000001 << 4 = 00010000
+	// in_use = 00010000;
+	
+	in_use = in_use | 1 << car_location;
+	print(in_use);		
+}
+
+// At this point we can check if a car is in use and we can set a car in use.
+// However, we need to be able to set a car to be NOT in use.  To do this, we
+// need another operator
+
+
+// --------------------- Bitwise Complement ------------------------
+// The complement operator '~' flips every bit.  If you have a one it becomes
+// a zero.  If you have a zero it becomes a one.  EVERY bit is changed.
+
+// For example, you could find the largest value of an unsigned number.  The
+// below would change all the bits to 1.
+// unsigned int max = ~0;
+
+// ** You cannot use ! and ~ interchangeably **.  When you take the logical
+// NOT of a non-zero number, you get 0 (FALSE).
+
+// Lets attempt to turn off a SINGLE bit (and leave all other bits unaffected)
+
+// char 0: 00000000
+// 1:      00000001
+// car_location (4): Shift 1 over 4: 00010000
+// Take existing car locations (say it looks like this: 01011100)
+// ~00010000 (this will flip the bits:)
+//
+// 01011100 &
+// 11101111
+// __________
+// 01001100
+// We went from:
+// 01011100 to:
+// 01001100
+// We turned off the 4th bit!
+inline void turn_off(int car_location){
+	char in_use = 0; // imagine this is actually: 01011100;
+
+	// First shift (<<), then flip values(~), then AND:
+	in_use = in_use & ~(1 << car_location);
+}
+
+
+// The above works.  If a car is in use, it will be turned off.  If a 
+// car is NOT in usu, it will remain a 0.
+// e.g. slot 4 (not in use when running the function):
+// 01010100 &
+// 11110111 (already shifted 1 over 4 and take complement)
+// ________
+// 01010100 // Slot 4 remains off
+
+// However, you can see this is a bit clunky.  It would be better to actually
+// check if the car is in use.  This is where the bitwise exclusive-or (XOR)
+// comes into play
+
+
+// ------------------ Bitwise Exclusive-Or (XOR) -------------------------
+// If BOTH inputs are 1 OR IF BOTH inputs 0, return 0
+
+// 01110010
+// 10101010
+// ________
+// 11011000
