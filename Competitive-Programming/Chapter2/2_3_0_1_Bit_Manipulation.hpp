@@ -7,11 +7,11 @@
 // ===================== Bitwise Precedence: =================
 
 // Precedence   Operator	                                    Associativity
-// 1 	        ~  (Bitwise negation)	                        Right to left
-// 2            << (Bitwise LeftShift), >> (Bitwise RightShift)	Left to Right
-// 3            &  (Bitwise AND)	                            Left to Right
-// 4            ^  (Bitwise XOR)	                            Left to Right
-// 5            |  (Bitwise Or)	                                Left to Right
+// 1            ~  (Bitwise negation)                           Right to left
+// 2            << (Bitwise LeftShift), >> (Bitwise RightShift) Left to Right
+// 3            &  (Bitwise AND)                                Left to Right
+// 4            ^  (Bitwise XOR)                                Left to Right
+// 5            |  (Bitwise OR)                                 Left to Right
 
 // ===========================================================
 
