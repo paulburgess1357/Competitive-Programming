@@ -4,6 +4,7 @@
 // Source
 // Guide to Competitive Programming by Antti Laaksonen
 
+
 // -------------------- Integers -----------------
 
 // Most common type in competitive programming:
@@ -28,7 +29,7 @@ inline void numeric_1(){
 
 
 // -------------- Modular Arithmetic --------------
-
+// 
 // There are times when the answer to a problem is a very large number, but it
 // is enough to output it (modulo m) -> The remainder.  If the answer is very
 // large, it sometimes is enough to simply output the remainder and use types

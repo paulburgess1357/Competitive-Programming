@@ -1,7 +1,7 @@
 #pragma once
 #include "../Utility/Utility.hpp"
 
-// Source
+// Source 
 // https://www.cprogramming.com/tutorial/bitwise_operators.html
 
 // ===================== Bitwise Precedence: =================
@@ -15,7 +15,8 @@
 
 // ===========================================================
 
-// Bit Overview:
+
+// --------------------- Bit Overview ---------------------
 // Base 2 (0 or 1)
 // Bit basics
 // [2^8    2^7    2^6   2^5   2^4   2^3  2^2  2^1  2^0 ]
@@ -29,7 +30,6 @@
 
 
 // -------------- Left and Right Shift Operators --------------
-
 // Operations are performed at the byte level.  Every bitwise operator will
 // be applied to an entire byte.  You can still change a single bit at a time.
 

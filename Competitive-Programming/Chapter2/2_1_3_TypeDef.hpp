@@ -5,6 +5,7 @@
 // Source
 // Guide to Competitive Programming by Antti Laaksonen
 
+
 // ----------------------------- Typedef -----------------------------
 
 // Rather than using long long, we can shorten this:

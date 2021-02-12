@@ -3,8 +3,9 @@
 #include <algorithm>
 #include "../Utility/Utility.hpp"
 
-// Source:
+// Source(s):
 // https://algotree.org/algorithms/recursive/permutations_recursion/
+// http://www.cplusplus.com/reference/algorithm/next_permutation/
 
 inline void generate_permutations(std::vector<int>& permutation, std::vector<int>& base_elements, std::vector<bool>& position_taken){
 
@@ -52,8 +53,6 @@ inline void recursion_permutations(){
 }
 
 // Using C++ standard library
-// Source: http://www.cplusplus.com/reference/algorithm/next_permutation/
-
 inline void recursion_permutations_2(){
 	int myints[] = { 1,2,3 };
 	std::sort(myints, myints + 3);;

@@ -5,6 +5,7 @@
 // Source
 // Guide to Competitive Programming by Antti Laaksonen
 
+
 // ---------------------------- Basic IO ----------------------------
 
 inline void input_output1(){
