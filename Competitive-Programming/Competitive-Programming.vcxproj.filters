@@ -41,5 +41,11 @@
     <ClInclude Include="Chapter2\2_3_0_1_Bit_Manipulation.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Chapter2\2_3_0_2_Bit_Manipulation.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Chapter2\2_3_1_Bit_Operations.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
