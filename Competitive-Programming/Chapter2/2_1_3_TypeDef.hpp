@@ -2,6 +2,8 @@
 #include <vector>
 #include <utility>
 
+// Source
+// Guide to Competitive Programming by Antti Laaksonen
 
 // ----------------------------- Typedef -----------------------------
 

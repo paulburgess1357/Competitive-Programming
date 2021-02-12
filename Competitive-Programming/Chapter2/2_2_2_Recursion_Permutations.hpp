@@ -3,7 +3,8 @@
 #include <algorithm>
 #include "../Utility/Utility.hpp"
 
-// Source: https://algotree.org/algorithms/recursive/permutations_recursion/
+// Source:
+// https://algotree.org/algorithms/recursive/permutations_recursion/
 
 inline void generate_permutations(std::vector<int>& permutation, std::vector<int>& base_elements, std::vector<bool>& position_taken){
 

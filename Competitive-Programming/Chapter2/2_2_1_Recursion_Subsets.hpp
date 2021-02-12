@@ -2,6 +2,9 @@
 #include "Utility/Utility.hpp"
 #include <vector>
 
+// Source
+// https://algotree.org/algorithms/recursive/subsets_recursion/
+
 // Generate all subsets of a set of n elements using recursion
 // Superset = {1, 2}
 // Subset 1: {1, 2}
@@ -9,7 +12,6 @@
 // Subset 3: {2}
 // Subset 4: {}
 
-// Source: https://algotree.org/algorithms/recursive/subsets_recursion/
 // Superset of size N.
 // 1.   Generate_Subsets(int R)
 // 2.       If(R == N + 1)

@@ -1,5 +1,4 @@
 #pragma once
-#include <iostream>
 #include "../Utility/Utility.hpp"
 
 // Source
@@ -7,12 +6,12 @@
 
 // ===================== Bitwise Precedence: =================
 
-// Precedence   Operator	                    Associativity
-// 1 	        ~  (Bitwise negation)	        Right to left
+// Precedence   Operator	                                    Associativity
+// 1 	        ~  (Bitwise negation)	                        Right to left
 // 2            << (Bitwise LeftShift), >> (Bitwise RightShift)	Left to Right
-// 3            &  (Bitwise AND)	            Left to Right
-// 4            ^  (Bitwise XOR)	            Left to Right
-// 5            |  (Bitwise Or)	                Left to Right
+// 3            &  (Bitwise AND)	                            Left to Right
+// 4            ^  (Bitwise XOR)	                            Left to Right
+// 5            |  (Bitwise Or)	                                Left to Right
 
 // ===========================================================
 
@@ -183,7 +182,7 @@ inline void turn_off(int car_location){
 
 
 // The above works.  If a car is in use, it will be turned off.  If a 
-// car is NOT in usu, it will remain a 0.
+// car is NOT in use, it will remain a 0.
 // e.g. slot 4 (not in use when running the function):
 // 01010100 &
 // 11110111 (already shifted 1 over 4 and take complement)
@@ -198,7 +197,44 @@ inline void turn_off(int car_location){
 // ------------------ Bitwise Exclusive-Or (XOR) -------------------------
 // If BOTH inputs are 1 OR IF BOTH inputs 0, return 0
 
-// 01110010
+// 01110010 ^
 // 10101010
 // ________
 // 11011000
+
+// bit_value XOR 0 --> Returns the bit_value back to us;
+// A = 1
+// A XOR 0 = 1
+// 
+// bit_value XOR 1 --> Returns the opposite bit_value back to us
+// A = 1;
+// A XOR 1 = 0;
+
+// How can this help us? XORing a bit with 0 results in the same bit.  Ideally,
+// we'd like to call one function that flips the bit of the car we are interested
+// in.  The remaining bits should remain unchanged.
+
+void flip_bit(int car_location){
+
+	char in_use = 0; // Imagine this is 01110101
+
+	// Say we want to flip the 4th bit:
+	// 01110101
+	// 1 << car_location(4) = 00001000
+	// _______________________________
+	//
+	// 01110101 ^
+	// 00001000
+	// __________
+	// 01111101
+
+	// First shift (<<) then XOR:
+	in_use = in_use ^ 1 << car_location;	
+}
+
+// Summary
+// When should you use bitwise operators?
+// Save space
+// Remove dependencies (e.g. ~0 to find the largest possible integer)
+// Bit shifting to multiply by 2
+// Compression or Encryptions

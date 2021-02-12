@@ -2,6 +2,8 @@
 #include <iostream>
 #include <string>
 
+// Source
+// Guide to Competitive Programming by Antti Laaksonen
 
 // ---------------------------- Basic IO ----------------------------
 

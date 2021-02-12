@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
 
+// Source
+// Guide to Competitive Programming by Antti Laaksonen
 
 // -------------------- Integers -----------------
 
