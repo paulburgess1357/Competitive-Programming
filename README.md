@@ -1,7 +1,5 @@
 # Competitive-Programming
-Competitive Programming Notes &amp; Code
-
-Source: Guide to Competitive Programming by Antti Laaksonen
+The following is a collection of competitive programming notes and code.  The repo closely follows the chapter structure from the book Guide to Competitive Programming 2nd Edition by Antti Laaksonen.  However, the sources of the notes can come from a variety of places.  The primary source of the notes is listed at the top of each section.
 
 ## Chapter 2:
 ### 2.1 : Language Features
